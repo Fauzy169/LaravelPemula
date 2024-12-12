@@ -13,9 +13,9 @@ class TodoController extends Controller
     public function index()
     {
         if(request('search')) {
-            $data = Todo::where('task','like','%'.request('search').'%')->get();
+            $data = Todo::where('task','like','%'.request('search').'%')->paginate(3)->withQueryString();
         } else {
-            $data = Todo::orderBy('task','asc')->get();
+            $data = Todo::orderBy('task','asc')->paginate(3);
         }
         return view('todo.app', ['data' => $data]);
 
