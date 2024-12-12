@@ -143,6 +143,9 @@
 
                         
                         {{ $data->links() }}
+
+
+                        <h1>Boostrap Testing</h1>
                     </div>
                 </div>
             </div>
