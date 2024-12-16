@@ -138,10 +138,6 @@
                             @endforeach
                         </ul>
                         
-
-
-
-                        
                         {{ $data->links() }}
 
 
